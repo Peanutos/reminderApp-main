@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="content">
+    <div class="animation">
+      <ion-card color="oilblack" class="loginCard">
+        <ion-card-header>
+          <ion-card-title>Login</ion-card-title>
+        </ion-card-header>
+        <p>Log into an existing account</p>
+        <ion-card-content>
+          <ion-input
+            label="Email"
+            labelPlacement="stacked"
+            placeholder="example@gmail.com"
+            type="email"
+            fill="outline"
+            shape="round"
+            [(ngModel)]="email"
+          ></ion-input>
+
+          <ion-input
+            label="Password"
+            labelPlacement="stacked"
+            placeholder="Enter account password"
+            type="password"
+            color="tangerine"
+            fill="outline"
+            shape="round"
+            [(ngModel)]="password"
+          ></ion-input>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card color="oilblack" class="buttonCard">
+        <ion-button (click)="logIn()" color="primary">
+          Login
+          <ion-icon aria-hidden="true" name="log-in" size="large"> </ion-icon>
+        </ion-button>
+        <ion-button (click)="redirectSignup()" color="tangerine">
+          Create account
+          <ion-icon aria-hidden="true" name="person-add" size="large">
+          </ion-icon>
+        </ion-button>
+      </ion-card>
+      
+      <div class="bypass">
+        <ion-button
+          (click)="redirectHome()"
+          color="danger"
+          shape="round"
+        >
+          <ion-icon slot="icon-only" name="walk"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
